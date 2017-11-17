@@ -1,0 +1,151 @@
+<html>
+    <head>
+        <title>ADMIN LOGIN</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="homecss.css">
+        
+        
+        <style>
+            input[type=submit] {
+                                    width: 20%;
+                                    padding: 12px 20px;
+                                    border-radius: 80%;
+                                    border: 1px solid #ccc;
+                                    background-color:#33ff33;
+                                }
+
+               input[type=text],[type=password] {
+                                width: 40%;
+                                padding: 12px 20px;
+                                margin: 8px 0;
+                                display: inline-block;
+                                border: 1px solid #ccc;
+                                border-radius: 4px;
+                                box-sizing: border-box;
+                                font-size: 100%;
+                               }
+            
+                               p {
+                                    font-size: 110%;
+                                    color: sienna;
+
+                                }
+                               body {
+                                background-image: url("ab4.jpg");
+                                color: whitesmoke;
+
+                               }
+                               
+        </style>
+        
+        <script>
+            function myfun(){
+                
+                
+               var pw= /^\w+$/; 
+               var nam= /^[a-zA-Z]+$/; 
+               var z=/^(?=.*\w)(?=.*[a-zA-Z])$/
+               var x1=document.getElementById("username").value;
+               var x2=document.getElementById("password").value;
+               
+               if(x1.length<1){
+                document.getElementById("span1").innerHTML="UserName Cannot be Empty";
+               return false; 
+                }
+                else if(x1.length>1){
+                if(!x1.match(nam)){
+                document.getElementById("span1").innerHTML="Please Enter a Valid UserName";
+                return false;
+                }
+                else{
+                    document.getElementById("span1").innerHTML="";
+
+                }
+                }
+                
+                if(x2.length<1){
+                document.getElementById("span2").innerHTML="Password Cannot be Empty";
+               return false; 
+                }
+                else if(x2.length>1){
+                if(!x2.test(z)){
+                document.getElementById("span2").innerHTML="Please Enter a Valid Password";
+                return false;
+                }
+                else{
+                    document.getElementById("span2").innerHTML="true";
+
+                }
+                }
+                
+            }
+            
+            //action="AdminController" method="post"
+        </script>
+       
+    </head>
+    <body>
+        
+        <header>
+            <li> 
+                
+                <a href="HomePage.html">Home</a>
+                                
+             </li>
+  
+                          
+            <li> 
+                <a href="cabfeatures.html">Cab Features</a>
+                
+            </li>
+  
+            <li> 
+                <a href="chargedetails.html" >Charge Details</a> 
+
+            </li>
+  
+
+        </header>
+        
+        
+    <center>
+        <h2 style="color:red">ADMIN LOGIN</h2>
+        
+    </center>
+    <br>
+    <br><br><br><br>
+    
+    <form action="AdminController" method="post">
+           <p> Username:&nbsp&nbsp&nbsp&nbsp&nbsp<input type="text" name="username" id="username"/>
+           <span style="color:yellow"  id=span1></span>
+           </p>
+           <br>
+           <p> Password:&nbsp&nbsp&nbsp&nbsp&nbsp<input type="password" name="password" id="password"/>
+            <span style="color:yellow"  id=span2></span>
+           </p>
+           <br>
+           <br>
+           
+        <center>    
+            <input type="submit" value="Login" style="color: red" onclick="return myfun()"/>
+            
+        </center>
+           
+           <br>
+           <br>
+        </form>
+    <br>
+           
+           
+           
+    <ul>
+
+   <a href="aboutus.html"><footer>About Us</footer></a>
+        <a href="contactus.html"><footer>Contact Us</footer></a>
+        
+
+    </ul>
+    
+    </body>
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Status Check</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" type="text/css" href="homecss.css">
+        
+    <style>
+	
+        input[type=text] {
+            width: 25%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            font-size: 100%;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        
+        input[type=date] {
+            width: 25%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            font-size: 80%;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        
+        input[type=submit] {
+            width: 25%;
+            padding: 12px 20px;
+            background-color: #99ff99;
+        }
+        p{
+            font-size: 20px;
+            color: whitesmoke;
+        }
+        ul{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+            color: whitesmoke;
+            font-size: 120%;
+            bottom:0px;
+            right: 0px;
+         }
+         
+         body {
+                background-image: url(ab4.jpg);
+                moz-background-size: cover;
+                -webkit-background-size: cover;
+                background-size: cover;
+                background-position: top center !important;
+                background-repeat: no-repeat !important;
+                background-attachment: fixed;
+              }
+              
+              header {
+                        list-style-type: none;
+                        margin: 0;
+                        padding: 0;
+                        overflow: hidden;
+                        background-color: #333;
+                        font-size: 120%;
+                        
+                    }
+                    
+                    
+         
+    </style>
+        
+    <script>
+      function myfun(){  
+        
+        var x1,x2,x3;
+        var num= /^[0-9]+$/;
+        
+        x1=document.getElementById("bookid").value;
+        x2=document.getElementById("date").value; 
+        x3=document.getElementById("feedback").value; 
+        
+        //validate status
+        if(x1.length<1){
+        document.getElementById("span1").innerHTML="Booking ID Cannot be Empty";
+        return false;
+        }
+        else if(x1.length>5){
+            document.getElementById("span1").innerHTML="Max Size of Booking ID is 5";
+           return false; 
+        }
+        else if(x1.length<6){
+        if(!x1.match(num)){
+        document.getElementById("span1").innerHTML="Please provide only Numbers";
+        return false;
+        }
+        else{
+            document.getElementById("span1").innerHTML="";
+            
+        }
+        }
+        
+        if(x2==""){
+            document.getElementById("span2").innerHTML="please select the date";
+            return false;
+        }  
+        else if(new Date() - new Date(x2) > (99999999)){
+               document.getElementById("span2").innerHTML="Invalid date, please select Today";
+                return false;
+        }  
+        else if(new Date() - new Date(x2) < (0)){
+            document.getElementById("span2").innerHTML="Invalid date, please select Today";
+            return false;
+        }    
+        else{
+        document.getElementById("span2").innerHTML="";
+        }
+        
+        if( x3 == ""){
+            document.getElementById("span3").innerHTML="Please enter some text into the Feedback Field";
+            return false;
+        }  
+        else{
+        document.getElementById("span3").innerHTML="";
+        return true;
+        }
+        
+      }
+        
+        
+    </script>
+    </head>
+    <body>
+        
+        <header>
+            <li> 
+                
+                <a href="HomePage.html">Home</a>
+                                
+             </li>
+  
+                          
+            <li> 
+                <a href="cabfeatures.html">Cab Features</a>
+                
+            </li>
+  
+            <li> 
+                <a href="chargedetails.html" >Charge Details</a> 
+
+            </li>
+  
+
+        </header>
+        
+        
+        <br>
+        
+    <center>
+        <h1 style="color:whitesmoke">Feedback</h1>
+    </center>
+        
+    <br>
+    
+    
+        <form action="FeedbackController" method="post">
+            
+            <p>Booking id:&nbsp&nbsp&nbsp&nbsp&nbsp<input type="text" id="bookid" name="bookid" placeholder="Booking ID"/>
+            <span style="color:yellow"  id=span1></span><br>
+            </p>
+            <p>Date:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                <input type="date" id="date" name="date" />
+            <span style="color:yellow"  id=span2></span><br>
+            </p>
+            <br>
+            <br>
+            <p >FeedBack:</p> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            <textarea rows="8" cols="60" name="feedback" id="feedback" autofocus ></textarea> <span style="color:yellow"  id=span3></span>
+
+            <br>
+            <br>
+            <br>
+            <br>
+            <center><input type="submit" name="submit" id="submit" value="Submit" onclick="return myfun()" /></center><br><br><br>
+                      
+        </form>
+    
+   
+        
+    
+    
+         <ul>
+             <a href="aboutus.html"><footer>About Us</footer></a>
+        <a href="contactus.html"><footer>Contact Us</footer></a>                               
+            <b>Popular Cars :</b> Mercedes Benz Taxi Cab, Toyota Innova Taxi Cab , 
+            Tata Indica Taxi Cab , Chevrolet Tavera 
+
+            <div class="ft">Copyright © 2016 Merto Technologies Pvt. Ltd. All rights reserved.
+            </div>
+         </ul>
+    
+    </body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Status Check</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" type="text/css" href="homecss.css">
+    <style>
+	
+        input[type=text] {
+            width: 25%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            font-size: 120%;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type=submit] {
+            width: 25%;
+            padding: 12px 20px;
+            background-color: #99ff99;
+        }
+        p{
+            font-size: 20px;
+            color: whitesmoke;
+        }
+        ul{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+            color: whitesmoke;
+            font-size: 120%;
+            bottom:0px;
+            right: 0px;
+         }
+         
+         body {
+                background-image: url(ab4.jpg);
+
+                -moz-background-size: cover;
+                -webkit-background-size: cover;
+                background-size: cover;
+                background-position: top center !important;
+                background-repeat: no-repeat !important;
+                background-attachment: fixed;
+              }
+              
+              header {
+                        list-style-type: none;
+                        margin: 0;
+                        padding: 0;
+                        overflow: hidden;
+                        background-color: #333;
+                        font-size: 150%;
+                    }
+         
+    </style>
+        
+    <script>
+      function myfun(){  
+        
+        var x1;
+        var num= /^[0-9]+$/;
+        
+        x1=document.getElementById("status").value;
+          
+        
+        //validate status
+        if(x1.length<1){
+        document.getElementById("span1").innerHTML="Booking ID Cannot be empty";
+        return false;
+        }
+        else if(x1.length>5){
+            document.getElementById("span1").innerHTML="Max Size of Booking ID is 5";
+           return false; 
+        }
+        else if(x1.length<6){
+        if(!x1.match(num)){
+        document.getElementById("span1").innerHTML="please provide only numbers";
+        return false;
+        }
+        else{
+            document.getElementById("span1").innerHTML="";
+            return true;
+        }
+        }
+      }
+        function myfun1(){
+        
+        var x2;
+        var num= /^[0-9]+$/;
+        x2=document.getElementById("details").value;
+        
+        //validate details
+        if(x2.length<1){
+        document.getElementById("span2").innerHTML="Booking ID Cannot be empty";
+        return false;
+        }
+        else if(x2.length>5){
+            document.getElementById("span2").innerHTML="Max Size of Booking ID is 5";
+            return false;
+        }
+        else if(x2.length<6){
+        if(!x2.match(num)){
+        document.getElementById("span2").innerHTML="please provide only numbers";
+        return false;
+        }
+        else{
+            document.getElementById("span2").innerHTML="";
+            return true;
+        }
+        }
+       
+     } 
+        
+    </script>
+    </head>
+    <body>
+        
+        <header>
+            <li> 
+                
+                <a href="HomePage.html">Home</a>
+                                
+             </li>
+  
+                          
+            <li> 
+                <a href="cabfeatures.html">Cab Features</a>
+                
+            </li>
+  
+            <li> 
+                <a href="chargedetails.html" >Charge Details</a> 
+
+            </li>
+  
+
+        </header>
+        
+        
+        <br>
+        
+    <center>
+        <h2 style="color:whitesmoke">CHECK YOUR CAB STATUS</h2>
+    </center>
+    
+        <form action="StatusCheckController" method="post">
+            
+            <p>Booking id:&nbsp&nbsp&nbsp&nbsp&nbsp<input type="text" id="status" name="status"/>
+            <span style="color:yellow"  id=span1></span>
+            </p>
+            <br>
+            
+            <center><input type="submit" name="check" id="check" value="CHECK STATUS" onclick="return myfun()" /></center><br><br><br>
+                      
+        </form>
+    
+   
+        <form action="StatusCheckController" method="post">
+        
+            
+             <center>
+                 <h2 style="color:whitesmoke"> IF ALREADY BOOKED KNOW YOUR CAB DETAILS </h2>
+             </center>
+            
+            
+            <p>Booking id:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="text" id="details" name="details"/>
+            <span style="color:yellow"  id=span2></span>
+            </p>
+             <br>
+             
+             <center><input type="submit" id="getcar" name="getcar" value="GET CAR DETAILS" onclick="return myfun1()" /></center>
+             <br>
+             <br>
+       </form>
+    
+    
+         <ul>
+              <a href="aboutus.html"><footer>About Us</footer></a>
+        <a href="contactus.html"><footer>Contact Us</footer></a>                                  
+            <b>Popular Cars :</b> Mercedes Benz Taxi Cab, Toyota Innova Taxi Cab , 
+            Tata Indica Taxi Cab , Chevrolet Tavera 
+
+            <div class="ft">Copyright Â© 2016 Merto Technologies Pvt. Ltd. All rights reserved.
+            </div>
+         </ul>
+    
+    </body>
+</html>

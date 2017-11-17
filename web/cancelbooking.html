@@ -1,0 +1,145 @@
+<html>
+    <head>
+        <title>Cancel A Cab</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="homecss.css">
+        
+<style>
+    body {
+background-image: url(lab.jpg);
+
+-moz-background-size: cover;
+-webkit-background-size: cover;
+background-size: cover;
+background-position: top center !important;
+background-repeat: no-repeat !important;
+background-attachment: fixed;
+}
+    
+input[type=text] {
+    width: 40%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 100%;
+}
+p {
+    font-size: 110%;
+    color: sienna;
+    
+}
+input[type=submit] {
+    width: 30%;
+    padding: 12px 20px;
+   
+    border: 1px solid #ccc;
+    
+   
+    background-color: #99ff99;
+}
+</style>
+        
+<script>
+function myfun(){
+
+
+var x10=document.getElementById("cancel").value;
+var num= /^[0-9]+$/;
+
+//validate book id
+if(x10.length<1){
+document.getElementById("span1").innerHTML="Booking ID Cannot be empty";
+return false;
+}
+else if(x10.length>5){
+    document.getElementById("span1").innerHTML="Max Size of Booking ID is 5";
+    return false;
+}
+else if(x10.length<6){
+if(!x10.match(num)){
+document.getElementById("span1").innerHTML="please provide only numbers";
+return false;
+}
+else{
+    document.getElementById("span1").innerHTML="";
+    return true;
+}
+}
+
+
+
+}
+
+//action="CancelCabController" method="post"
+</script>     
+
+    </head>
+    <body>
+        
+       <header>
+            <li> 
+                
+                <a href="HomePage.html">Home</a>
+                                
+             </li>
+  
+                          
+            <li> 
+                <a href="cabfeatures.html">Cab Features</a>
+                
+            </li>
+  
+            <li> 
+                <a href="chargedetails.html" >Charge Details</a> 
+
+            </li>
+  
+
+        </header>
+        
+        
+        
+           <br><br>
+          
+    <center>
+        <h2 style="color:blue"> CANCEL YOUR BOOKING</h2>
+    </center>
+    
+    
+    
+    
+    <br>
+    <br><br><br>  
+    <br>
+    <br>
+       <form action="CancelCabController" method="post">
+          <p style="color:red">   <b>Enter Your Booking ID To Cancel Your Request: <b><br><br>
+        <br>
+     <b> Booking ID: &nbsp&nbsp&nbsp&nbsp&nbsp<input type="text" name="cancel" id="cancel" placeholder="Booking ID"/> <b>
+           <span style="color:yellow"  id=span1></span>
+            </p>
+        <br>
+    
+    
+    <br>
+   
+    <br>   
+            <center><input type="submit" value="Cancel Booking" onclick="return myfun()" /></center>
+            
+        </form>
+    <br>
+    <br><br><br><br><br><br>
+    
+    
+<ul>
+
+         <a href="aboutus.html"><footer>About Us</footer></a>
+        <a href="contactus.html"><footer>Contact Us</footer></a>
+
+</ul>
+    </body>
+</html>
