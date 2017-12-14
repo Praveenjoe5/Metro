@@ -1,0 +1,206 @@
+
+header {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    font-size: 120%;
+}
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    color: whitesmoke;
+    font-size: 100%;
+    bottom:0px;
+    right: 0px;
+    
+    
+}
+
+.ft {
+    border: none;
+    color: wheat;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    float: center;
+    
+}
+footer{
+    float: right;
+    color: #99ff99;  
+    padding: 14px 16px;
+    
+}
+
+footer:hover{
+     background-color: green;
+}
+
+li {
+    float: left;
+    color : white;
+    
+}
+
+li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+    background-color: red;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.container {
+    position: relative;
+    background-color: #333;
+}
+
+.topleft1 {
+    position: absolute;
+    top: 80px;
+    left: 16px;
+    font-size: 18px;
+}
+
+.topleft2 {
+    position: absolute;
+    top: 129px;
+    left: 16px;
+    font-size: 18px;
+}
+.topleft3 {
+    position: absolute;
+    top: 178px;
+    left: 16px;
+    font-size: 18px;
+}
+.topleft4 {
+    position: absolute;
+    top: 227px;
+    left: 16px;
+    font-size: 18px;
+}
+.topleft5 {
+    position: absolute;
+    top: 276px;
+    left: 16px;
+    font-size: 18px;
+}
+.admin {
+    position: absolute;
+    top: 600px;
+    left: 16px;
+    font-size: 18px;
+}
+
+
+.button {
+    background-color: green;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    width: 200px;
+    float: left;
+    border-radius: 65%;
+}
+
+.button:hover {
+    background-color: blue;
+    color: whitesmoke;
+}
+
+do.img { 
+    max-width: 100%;
+    height: auto;
+    opacity: 1.5;
+}
+
+div.img {
+    
+    float: left;
+    width: 180px;
+}
+div.img1 {
+    
+    float: left;
+    width: 500px;
+}
+
+.ready{
+    
+    position: absolute;
+    top: 38px;
+    right: 16px;
+    font-size: 18px;
+    color: lightcyan;
+    float: left;
+    padding: 15px;
+    
+}
+.cont{
+    
+    position: absolute;
+    bottom: 30px;
+    right: 16px;
+    font-size: 18px;
+    color: lightcyan;
+    float: left;
+    padding: 15px;
+    
+}
+.safety{
+        
+    position: absolute;
+    bottom:  30px;
+    left:  36px;
+    font-size: 18px;
+    color: lightcyan;
+    float: left;
+    padding: 15px;
+ }
+
+ 
+ td ,tr {    
+     
+    width: 20%;  
+    text-align: left;
+}
+
+input[type=text]:focus {
+    border: 3px solid plum;
+    color: black;
+}
+
+.zoom {
+  zoom: 135%;
+}
+
+
+
+
+
+
+
+
+
+
+

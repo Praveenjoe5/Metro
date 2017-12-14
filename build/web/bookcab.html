@@ -1,0 +1,187 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Book A Cab</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" type="text/css" href="homecss.css">
+    
+    <style>
+	input[type=text],input[type=date],input[type=time], select {
+    width: 30%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input[type=submit] {
+    width: 30%;
+    padding: 12px 20px;
+   
+    border: 1px solid #ccc;
+    
+   
+    background-color: #99ff99;
+}
+body {
+background-image: url(book.jpg);
+
+-moz-background-size: cover;
+-webkit-background-size: cover;
+background-size: cover;
+background-position: top center !important;
+background-repeat: no-repeat !important;
+background-attachment: fixed;
+}
+    </style>    
+    
+    <script>
+    function myfun(){
+        
+        var x1,x2;
+        var num= /^[0-9]+$/;
+        
+        x1=document.getElementById("bookid").value;
+        x2=document.getElementById("bankname").value;
+       
+       
+       
+       //validate book id
+        if(x1.length<1){
+        document.getElementById("span1").innerHTML="Booking ID Cannot be empty";
+        
+        }
+        else if(x1.length>5){
+            document.getElementById("span1").innerHTML="Max Size of Booking ID is 5";
+            
+        }
+        else if(x1.length<6){
+        if(!x1.match(num)){
+        document.getElementById("span1").innerHTML="please provide only numbers";
+     
+        }
+        else{
+            document.getElementById("span1").innerHTML="";
+            
+        }
+        }
+
+        
+        //validate bank name
+        
+        if(x2.length<1){
+        document.getElementById("span2").innerHTML="id Cant be empty";
+        
+        }
+        else{
+        document.getElementById("span2").innerHTML="";
+        
+        }
+        
+        //to check payment mode
+        if(document.getElementById("cc").checked==false && document.getElementById
+        ("dc").checked==false ){
+        document.getElementById("span3").innerHTML="please select your service";
+        return false;
+        }
+        else{
+        document.getElementById("span3").innerHTML="";
+        return true;
+        }
+
+        
+        
+        
+    }
+    
+    //action="BookCabController"
+    </script>
+   
+    </head>
+    
+    <header>
+            <li> 
+                
+                <a href="HomePage.html">Home</a>
+                                
+             </li>
+  
+                          
+            <li> 
+                <a href="cabfeatures.html">Cab Features</a>
+                
+            </li>
+  
+            <li> 
+                <a href="chargedetails.html" >Charge Details</a> 
+
+            </li>
+  
+
+        </header>
+        
+    
+    <body style="color:brown">
+    
+         
+        
+        <br>
+        
+        
+        
+        
+    <center>  <h1 style="color:greenyellow"> PAYMENT PORTAL </h1> </center><br>
+    <br>
+        <br>
+        <br>
+        
+    
+    <form action="BookCabController">
+        YOUR BOOKING ID: &nbsp;&nbsp;&nbsp;<input type="text" name="bookid" id="bookid"/>
+        &nbsp;&nbsp;<span style="color:yellow"  id=span1></span>
+        
+    <br>
+            
+        <br>
+        <br>
+        BANK NAME: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               <select name="bankname" id="bankname" >
+                        <option></option>
+                        <option value="HDFC BANK">HDFC BANK</option>
+                        <option value="AXIS BANK">AXIS BANK</option>
+                        <option value="ICICI BANK">ICICI BANK</option>                         
+                        </select>&nbsp;&nbsp;<span style="color:yellow"  id=span2></span>
+    <br>
+            <br><br>
+        MODE OF PAYMENT:&nbsp;&nbsp;<input id="cc" type="radio" name="card" value="CREDIT CARD"/>CREDIT CARD <br><br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+   <input id="dc" type="radio" name="card"  value="DEBIT CARD" /> DEBIT CARD 
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:yellow"  id=span3></span>                         
+   
+   <br>
+        
+        
+   <BR>
+   <BR>
+   <center><input type="submit" value="Submit" onclick="return myfun()" /></center><br>
+    </form>
+    
+   <br>
+        
+ <ul>
+
+       <a href="aboutus.html"><footer>About Us</footer></a>
+        <a href="contactus.html"><footer>Contact Us</footer></a>                         
+        
+
+</ul>
+    
+    
+    
+    </body>
+</html>

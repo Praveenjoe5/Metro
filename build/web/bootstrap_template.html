@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>new bootstrap template</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+});
+</script>
+    <style>
+.bg-1 { 
+    background-color: #1abc9c; /* Green */
+    color: #ffffff;
+}
+.bg-2 { 
+    background-color: chocolate; /* Chocolate */
+    color: #ffffff;
+}
+.bg-3 { 
+    background-color: steelblue; /* steelblue */
+    color: #ffffff;
+}
+
+.bg-5 { 
+    background-color: dodgerblue; /* dodgerblue */
+    color: #ffffff;
+}
+.bg-6 { 
+    background-color: black; /* black */
+    color: #ffffff;
+}
+.jumbotron{
+    color: black;
+}
+button{
+    width: 250px;
+    height: 70px;
+    margin-left: 100px;
+}
+img{
+    width: 800px;
+    height: 600px;
+}
+body {
+      position: relative;
+  }
+    </style>
+    </head>
+    <body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+         <div class="container-fluid bg-1 text-center" id="home">
+        <div class="jumbotron text-center"><h1>Metro cabs</h1></div>
+      
+                 <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">METROCABS</a>
+    </div>
+      <ul class="nav nav-pills nav-justified" role="tablist">
+      <li class="active"><a href="#home">Home</a></li>
+      <li><a href="#cab_feature">Cab Feature</a></li>
+      <li><a href="#charge">Charge Details</a></li> 
+      <li><a href="#about">About Us</a></li> 
+      <li><a href="#contact">Contact Us</a></li> 
+      
+    </ul>
+ </nav>
+                <div class="row">
+                    <div class="col-sm-4">
+            
+                        <a href="requestcab.html" data-toggle="tooltip" title="To request a Cab,Please select this"><button type="button" class="btn btn-primary btn-lg btn-info">Request a Cab</button></a><br><br><br>
+                        <a href="status.html" data-toggle="tooltip" title="If you have requested/Booked a Cab,Please check the status here"><button type="button" class="btn btn-primary btn-lg btn-info">Status of Cab</button></a><br><br><br>
+                        <a href="bookcab.html" data-toggle="tooltip" title="To Book a Cab,Please select this"><button type="button" class="btn btn-primary btn-lg btn-info" >Book a Cab</button></a><br><br><br>
+                        <a href="cancelbooking.html" data-toggle="tooltip" title="To Cancel a Cab,Please select this"><button type="button" class="btn btn-primary btn-lg btn-info">Cancel a Cab</button></a><br><br><br>
+                        <a href="feedback.html" data-toggle="tooltip" title="To give Feedback for your ride,Please select this"><button type="button" class="btn btn-primary btn-lg btn-info" >Feedback</button><br></a><br><br><br>
+                        <a href="adminlogin.html" data-toggle="tooltip" title="Only Admin should select this"><button type="button" class="btn btn-warning btn-lg btn-info" >Admin Login</button></a><br><br><br>
+
+        </div>
+       <div class="col-sm-8">
+   
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+
+      <div class="item active">
+        <img src="car1.jpeg" alt="car1">
+        <div class="carousel-caption">
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="car2.jpg" alt="car2">
+        <div class="carousel-caption">
+          </div>
+      </div>
+    
+      <div class="item">
+        <img src="car3.jpg" alt="car3">
+        <div class="carousel-caption">
+        </div>
+      </div>  
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+    <h3><b>From start to finish, a ride you can trust</b></p>
+                        <p>Your safety is important to us before, during, and after every trip. <br>
+                        That’s why we continue to develop technology that helps make millions of rides <br>
+                        safer every day.</h3>
+  </div>
+           </div>
+            </div>
+        <div class="container-fluid bg-2 text-center" id="cab_feature">
+            <br>
+            <div class="well text-center" style="color: black;"><h2>Cab Features</h2></div>
+    <br>
+    <div class="row">
+         <div class="col-md-2"></div>
+         <div class="col-md-8">
+  <div id="myCarousel1" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel1" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel1" data-slide-to="1"></li>
+      <li data-target="#myCarousel1" data-slide-to="2"></li>
+          </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+
+      <div class="item active">
+        <img src="car1.jpeg" alt="ready">
+        <div class="carousel-caption">
+          <h3>Ready anywhere, anytime</h3>
+          <p style="font-size: medium;"> Daily commute. Errand across town. Early morning flight. 
+                Late night drinks. Wherever you’re headed,
+                count on MetroCab for a ride.</p>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="car2.jpg" alt="Safety">
+        <div class="carousel-caption">
+          <h3>Safety - Putting people first</h3>
+          <p style="font-size: medium;">Whether riding in the backseat or driving up front, 
+                every part of the MetroCab experience has been designed
+                around your safety and security.</p>
+        </div>
+      </div>
+    
+      <div class="item">
+        <img src="car3.jpg" alt="Control">
+        <div class="carousel-caption">
+          <h3>Control</h3>
+          <p style="font-size: medium;"> We have clear and transparent pricing listed online. 
+                Never haggle with drivers again on payments and be  
+                confident and assured of what you are being charged for!</p>
+        </div>
+      </div>
+ 
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel1" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel1" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+             </div>
+        <div class="col-md-2"></div>
+    </div>
+  <h3>many features are coming..</h3>
+  </div>
+         <div class="container-fluid bg-3" id="charge">
+    <br>
+            <div class="well text-center" style="color: black;"><h2>Charge Details</h2></div>
+            <center><p>MetroCab is a taxi service providers in Metro cities Delhi , Mumbai , Kolkata and Chennai. 
+            It Operates 24X7 with 10 AC cabs in each city except Delhi. </p>
+                <p>We provides prepaid Cab Travelling service within city. </p></center>
+        <br>
+        <center>
+                    <h3>Standard Fare</h3>
+                </center> 
+                <br>
+                <center>
+                     <div class="table-responsive">
+  <table class="table">
+      <thead style="color: black">
+      <tr>
+       <th>Service</th>
+       <th>Base Fare</th>
+       <th>Distance Fare</th>
+       <th>Wait Time Fare</th>
+      </tr>
+    </thead>
+    <tbody style="color: aliceblue">
+      <tr>
+                        <td>A/C</td>
+                        <td>Rs 50 for first 2 km</td>
+                        <td>Rs 10 per km</td>
+                        <td>N/A</td>
+                    </tr>
+                    <tr>
+                        <td>Non A/C</td>
+                        <td>Rs 50 for first 2 km</td>
+                        <td>Rs 8 per km</td>
+                        <td>N/A</td>
+                    </tr>
+    </tbody>
+  </table>
+  </div></center>
+                <br>
+             
+                <pre>
+                 Toll Fee*              Toll fee will be applicable if there are tolls along your route. In cases where toll fee is not included in your bill, 
+                                        we request you to pay the fee directly to the concerned authorities at the toll gate. 
+                 
+                 Parking Fee            Please pay parking fee to concerned authorities whenever it is not included in your bill.   
+                </pre>
+                <br>
+                
+                <center> <p>* Wait time includes time taken to board the cab after pickup time as well as waiting during the trip.</p>
+        
+                    <p> We believe in Transparent pricing.<p></center>
+                <br><br>
+  </div>
+             
+        <div class="container-fluid bg-5" id="about">
+    <br>
+            <div class="well text-center" style="color: black;"><h2>About Us</h2></div>
+        <br>
+        <div class="row">
+            <div class="col-sm-4">
+                <h3>Availablity of Metro Cabs</h3>
+                <div class="list-group">
+  <a href="#" class="list-group-item" data-toggle="tooltip" title="A/c & Non-A/c Cars Available">Delhi<span class="badge">20</span></a>
+  <a href="#" class="list-group-item" data-toggle="tooltip" title="Only A/c Cars Available">Mumbai<span class="badge">10</span></a>
+  <a href="#" class="list-group-item" data-toggle="tooltip" title="Only A/c Cars Available">Chennai<span class="badge">10</span></a>
+    <a href="#" class="list-group-item" data-toggle="tooltip" title="Only A/c Cars Available">Kolkatta<span class="badge">10</span></a>
+</div>
+            </div>
+            <div class="col-sm-8">
+                <img src="car3.jpg" alt="car3" style="width: 760px;height: 270px;"><br><br><br><br><br>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+             <p style="font-size:150%">MetroCab is a taxi service providers in Metro cities Delhi , Mumbai , Kolkata and Chennai. 
+        We Operate 24X7 with 10 AC cabs in each city except Delhi.Number of cabs in Delhi is 20 out of 10 is non AC.<br> 
+        May be in future they may increase number of cab in each city and non ac cab available in all cities.
+        We provide prepaid Cab Travelling service within city.<br>
+        <br>
+        No Need of registration to book a Cab. You can directly search for a cab by mentioning date, time, pickup place etc. Then you can proceed to Book through online payment and
+        you can cancel the Cab before one hour of start time of journey, normal request from requested start time Otherwise you can’t. We are trying to give 100% safe journey and punctuality in pickup and drop. 
+        But we cannot give guarantee for pickup and drop time due to traffic in metro cities.</p><br><br><br>
+        </div>
+        </div>
+        </div>
+            
+          
+            
+        <div class="container-fluid bg-6" id="contact"><br>
+  <div class="well text-center" style="color: black;"><h2>Contact Us</h2></div>
+  <p class="text-center"><em>We love our Customers!</em></p>
+   <br>
+   For support with your bookings and other queries, click <a href="google.co.in" style="color:greenyellow">here</a> or call our Support team in your city.<br>
+   Please report any security issues with Metro Cab at security@metrocab.com.<br>
+               
+  <div class="row test">
+    <div class="col-md-3">
+      <p>Customers? Drop a note.</p>
+      <br>
+      <p><span class="glyphicon glyphicon-map-marker"></span>India, Chennai</p>
+      <p><span class="glyphicon glyphicon glyphicon-user"></span>Name: John</p>
+      <p><span class="glyphicon glyphicon-phone"></span>Phone: 044-5656565</p>
+      <p><span class="glyphicon glyphicon-envelope"></span>Email: jh002586@metrocab.com</p> 
+    </div>
+          <div class="col-md-3">
+       <br> <br>
+      <p><span class="glyphicon glyphicon-map-marker"></span>India, Delhi</p>
+      <p><span class="glyphicon glyphicon glyphicon-user"></span>Name: Liam</p>
+      <p><span class="glyphicon glyphicon-phone"></span>Phone: 011-6767676</p>
+      <p><span class="glyphicon glyphicon-envelope"></span>Email: li001568@metrocab.com</p> 
+    </div>
+          <div class="col-md-3">
+       <br> <br>
+      <p><span class="glyphicon glyphicon-map-marker"></span>India, Kolkatta</p>
+      <p><span class="glyphicon glyphicon glyphicon-user"></span>Name: Kunal</p>
+      <p><span class="glyphicon glyphicon-phone"></span>Phone: 033-1515151</p>
+      <p><span class="glyphicon glyphicon-envelope"></span>Email: ku006582@metrocab.com</p> 
+    </div>
+          <div class="col-md-3">
+       <br> <br>
+      <p><span class="glyphicon glyphicon-map-marker"></span>India, Mumbai</p>
+      <p><span class="glyphicon glyphicon glyphicon-user"></span>Name: Vijaya</p>
+      <p><span class="glyphicon glyphicon-phone"></span>Phone: 022-5555666</p>
+      <p><span class="glyphicon glyphicon-envelope"></span>Email: ku006582@metrocab.com</p> 
+          </div><br>
+           <br> 
+           </div>
+      <div class="row">
+    <div class="col-md-12">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea>
+      <div class="row">
+        <div class="col-md-12 form-group">
+            <br>
+          <button class="btn pull-right btn-primary" type="submit">Send</button>
+        </div>
+      </div> 
+    </div>
+  </div>
+  <br>
+             
+             <b> Found a Application Security Vulnerability? We may have a bounty for you ! </b><br>
+             <br>
+             
+        We, at Metro Cab, are extremely paranoid about the security of our customer's information. We always appreciate your efforts to keep our customers safe. We have taken a small step towards <br> 
+        the same, to safeguard our customer's data and give all the deserved credits to our dedicated researchers. We would be glad to invite you to participate in our bug bounty program. <br>
+        Please report any security vulnerabilities in Metro Cab at <a href="google.co.in" style="color:greenyellow"> Metro Bug Bounty</a>.
+        
+</div>
+            
+            
+    </body>
+</html>
